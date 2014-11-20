@@ -27,10 +27,34 @@ describe Lista do
         @L1.insert(@N5)
    
    
-   
+		@Exa=ExamenGR.new(@L1)   
     end
-	
 
+# Pruebas para la clase Examen_Grafico
+		it " Existe una clase examen" do
+			expect(@Exa.class).to eq ExamenGR
+		end
+		
+		it " La clase examen tiene una lista, y contadores de respuestas bien y mal" do
+		
+			expect(@Exa.lista.class).to eq(Lista)	
+			expect(@Exa.bien.is_a?Integer).to eq (true)
+			expect(@Exa.mal.is_a?Integer).to eq (true)
+		end
+		
+		it " La clase examen realiza un examen completo" do
+		
+				expect(@Exa.hacer_examen).to eq(true)
+				
+		end
+	
+		it " La clase examen devuelve si estas aprobado" do
+				@Exa.hacer_examen
+				expect(@Exa.mostrar_aprobado).to eq(true)
+
+		end
+
+	
 #pruebas para la clase sel_simple y sel_multiple con comparable
 	
 	it " pertenece a la clase sel_simple" do

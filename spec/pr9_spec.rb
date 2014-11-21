@@ -1,6 +1,6 @@
 #encoding: utf-8
 require 'practica9.rb'
-
+require 'spec_helper.rb'
 require 'test/unit'
 
 

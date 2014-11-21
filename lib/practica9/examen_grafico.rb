@@ -1,18 +1,22 @@
 class ExamenGR
 
 attr_accessor :lista, :bien , :mal
+	
 	def initialize(lista)
 
 		@lista= lista
 		@bien = 0
 		@mal = 0
+		
 	end
 
-	def hacer_examen
+	def hacer_examen(respuesta)
+		respuestas = respuesta
 		aux = @lista.tail
+		cont = 0
 		while (aux != nil)
 			aux.value.to_s
-			var = "c"
+			var = respuestas[cont]
 			
 			if ( var == aux.value.c)
 				@bien=@bien+1
@@ -21,6 +25,7 @@ attr_accessor :lista, :bien , :mal
 			end
 		
 		aux = aux.next
+		cont  = cont + 1
 
 		end
 

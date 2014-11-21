@@ -44,14 +44,19 @@ describe Lista do
 		
 		it " La clase examen realiza un examen completo" do
 		
-				expect(@Exa.hacer_examen).to eq(true)
+				expect(@Exa.hacer_examen(["c","c","c","c","c"])).to eq(true)
 				
 		end
 	
 		it " La clase examen devuelve si estas aprobado" do
-				@Exa.hacer_examen
+				@Exa.hacer_examen(["c","c","c","c","c"])
 				expect(@Exa.mostrar_aprobado).to eq(true)
 
+		end
+		
+		it "El examen esta suspendido" do	
+				@Exa.hacer_examen(["a","a","a","a","a"])
+				expect(@Exa.mostrar_aprobado).to eq(false)
 		end
 
 	

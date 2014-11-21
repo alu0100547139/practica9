@@ -61,7 +61,7 @@ describe Lista do
 		end
 
 	
-#pruebas para la clase sel_simple y sel_multiple con comparable
+#pruebas para la clase sel_simple y sel_multiple con comparable.
 	
 	it " pertenece a la clase sel_simple" do
 	

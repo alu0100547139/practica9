@@ -11,14 +11,12 @@ attr_accessor :lista, :bien , :mal
 	end
 
 	def hacer_examen(respuesta)
-		respuestas = respuesta
 		aux = @lista.tail
 		cont = 0
 		while (aux != nil)
 			aux.value.to_s
-			var = respuestas[cont]
-			
-			if ( var == aux.value.c)
+		
+			if ( respuesta[cont] == aux.value.c)
 				@bien=@bien+1
 			else
 				@mal=@mal+1

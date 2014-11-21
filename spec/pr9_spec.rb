@@ -27,10 +27,11 @@ describe Lista do
         @L1.insert(@N5)
    
    
-		@Exa=ExamenGR.new(@L1)   
+		@Exa=ExamenGR.new(@L1)  
+		
     end
 
-# Pruebas para la clase Examen_Grafico
+# Pruebas para la clase Examen_Grafico.
 		it " Existe una clase examen" do
 			expect(@Exa.class).to eq ExamenGR
 		end
